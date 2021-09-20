@@ -12,7 +12,7 @@ app.use(function(req, res, next) {
    next();
 });
 
-const port = 9010;
+const port = process.env.PORT || 9010;
 
 const db = require("./config/keys").mongoURI;
 const productRoute = require("./src/routes/productroute");
